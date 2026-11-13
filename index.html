@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Любимая ❤</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4dcd6;
+    background-image:
+      radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px),
+      radial-gradient(rgba(160,110,100,.10) 1px, transparent 1px);
+    background-size: 3px 3px, 5px 5px;
+    background-position: 0 0, 1px 2px;
+    font-family: 'Marck Script', cursive;
+    color: #2b2222;
+    text-align: center;
+    padding: 32px 28px;
+    overflow: hidden;
+  }
+  .heart {
+    width: 72px; height: 72px;
+    animation: beat 1.6s ease-in-out infinite;
+    filter: drop-shadow(0 4px 6px rgba(150, 0, 0, .25));
+    opacity: 0;
+    animation: appear .8s ease forwards, beat 1.6s ease-in-out .8s infinite;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 34px;
+    margin: 22px 0 10px;
+    opacity: 0;
+    animation: appear 1s ease .6s forwards;
+  }
+  p {
+    font-size: 25px;
+    line-height: 1.45;
+    max-width: 320px;
+    opacity: 0;
+    animation: appear 1.2s ease 1.2s forwards;
+  }
+  .small {
+    position: fixed;
+    bottom: 28px;
+    width: 22px; height: 22px;
+    opacity: 0;
+    animation: appear 1s ease 2.2s forwards;
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.12); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+  }
+  @keyframes appear {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <svg class="heart" viewBox="0 0 32 29" aria-hidden="true">
+    <defs>
+      <radialGradient id="g" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#ff5a5a"/>
+        <stop offset="55%" stop-color="#e01b24"/>
+        <stop offset="100%" stop-color="#a50d14"/>
+      </radialGradient>
+    </defs>
+    <path fill="url(#g)" d="M16 28.5S1 19.6 1 9.3C1 4.6 4.6 1 9 1c3 0 5.6 1.7 7 4.2C17.4 2.7 20 1 23 1c4.4 0 8 3.6 8 8.3 0 10.3-15 19.2-15 19.2z"/>
+    <ellipse cx="9" cy="7.5" rx="3" ry="1.8" fill="#fff" opacity=".35" transform="rotate(-30 9 7.5)"/>
+  </svg>
+
+  <h1>Любимая</h1>
+  <p>Я не устану говорить, как сильно люблю тебя. Ты — лучшее, что случилось со мной</p>
+
+  <svg class="small" viewBox="0 0 32 29" aria-hidden="true">
+    <path fill="#d61f26" d="M16 28.5S1 19.6 1 9.3C1 4.6 4.6 1 9 1c3 0 5.6 1.7 7 4.2C17.4 2.7 20 1 23 1c4.4 0 8 3.6 8 8.3 0 10.3-15 19.2-15 19.2z"/>
+  </svg>
+</body>
+</html>
